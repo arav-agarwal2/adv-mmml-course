@@ -32,8 +32,8 @@ title: Schedule
     <td>
         {{ lecture.title }} <br/>
             <ul>
-                {% if lecture.topics|length == 1 %}
-                    {{lecture.topics}}
+                {% if lecture.topics|size == 1 %}
+                <p style="font-size:10px;"> {{lecture.topics}} </p>
                 {% elsif lecture.topics|length > 1 %}
                    {% for topic in lecture.topics %}
                       <li style="font-size:10px;">
@@ -45,8 +45,8 @@ title: Schedule
     </td>
     <td>
         <ul>
-                {% if lecture.readings|length == 1 %}
-                    {{lecture.readings}}
+                {% if lecture.readings|size == 1 %}
+            <p style="font-size:10px;">{{lecture.readings}}</p>
                 {% elsif lecture.readings|length > 1 %}
                    {% for reading in lecture.readings %}
                       <li style="font-size:10px;">
